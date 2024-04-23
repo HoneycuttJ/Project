@@ -476,12 +476,12 @@ include("db_connection.php");
     <form name="login-form" method="POST" action="validate-login.php">
       <input type="text" name="u" id="u" placeholder="Username" required="required" />
       <input type="password" name="p" id="p" placeholder="Password" required="required" />
-      <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+      <button type="submit" class="linktext">Login</button>
     </form>
     </font>
     <label id="cart"> </label>
     <label id="item"> </label>
-    <a href="javascript:void(0)" onclick="popupclose('6')" class=linktext>Login</a>
+	<a href="javascript:void(0)" onclick="popupclose('6')" class=linktext>Close</a>
   </div>
 
   <div id="fade2" class="black_content"></div>
