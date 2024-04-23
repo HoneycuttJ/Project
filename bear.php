@@ -212,43 +212,7 @@ include("db_connection.php");
             <label for="grade" class="form-label">Grade</label>
             <input type="text" class="form-control" id="grade" name="grade" required>
         </div>
-        <div class="mb-3">
-            <label for="ppg" class="form-label">PPG</label>
-            <input type="text" class="form-control" id="ppg" name="ppg" required>
-        </div>
-        <div class="mb-3">
-            <label for="rpg" class="form-label">RPG</label>
-            <input type="text" class="form-control" id="rpg" name="rpg" required>
-        </div>
-        <div class="mb-3">
-            <label for="apg" class="form-label">APG</label>
-            <input type="text" class="form-control" id="apg" name="apg" required>
-        </div>
-        <div class="mb-3">
-            <label for="spg" class="form-label">SPG</label>
-            <input type="text" class="form-control" id="spg" name="spg" required>
-        </div>
-        <div class="mb-3">
-            <label for="bpg" class="form-label">BPG</label>
-            <input type="text" class="form-control" id="bpg" name="bpg" required>
-        </div>
-        <div class="mb-3">
-            <label for="topg" class="form-label">TO/G</label>
-            <input type="text" class="form-control" id="topg" name="topg" required>
-        </div>
-        <div class="mb-3">
-            <label for="fg" class="form-label">FG%</label>
-            <input type="text" class="form-control" id="fg" name="fg" required>
-        </div>
-        <div class="mb-3">
-            <label for="3fg" class="form-label">3ptFG%</label>
-            <input type="text" class="form-control" id="3fg" name="3fg" required>
-        </div>
-        <div class="mb-3">
-            <label for="ft" class="form-label">FT%</label>
-            <input type="text" class="form-control" id="ft" name="ft" required>
-        </div>
-		<div class="mb-3">
+		<div class="mb-3"
             <label for="postion" class="form-label">Position</label>
             <input type="text" class="form-control" id="pos" name="pos" required>
         </div>
