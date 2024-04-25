@@ -8,7 +8,7 @@ include("db_connection.php");
 <head>
   <title>TIPOFF</title>
 
-  <link rel="stylesheet" href="mystyles.css" />
+  <link rel="stylesheet" href="mystyles1.css" />
   <script type="text/javascript" src="script.js"></script>
 
 </head>
@@ -18,89 +18,91 @@ include("db_connection.php");
 <body bgcolor="#fff">
   <br><br><br>
 
-  <img src="MainLogo.jpg" alt="TIPOFF Logo" style="width:400px;height:175px;" class="img2">
+  <img src="Basketball.jpg" alt="TIPOFF Logo" style="width:400px;height:200px;" class="img2">
 
 
 
   <ul>
   </ul>
-  <p align="center"> Welcome to TIPOFF - youth sports for the future!
-  <p>
 
 
   <table align="center">
     <tr>
       <td align="center">
         <a href="javascript:void(0)" onclick="popupfunction('1')" class=li>
-          <img src="Bear.jpg" alt="Bear" style="width:200;height:300px" />
+          <img src="Bear1.jpg" alt="Bear" style="width:200;height:300px" />
       </td>
       </a>
       </td>
       <td>
         <a href="javascript:void(0)" onclick="popupfunction('2')" class=li>
-          <img src="Eagle.jpg" alt="Eagle" style="width:200;height:300px">
+          <img src="Eagle1.jpg" alt="Eagle" style="width:200;height:300px">
         </a>
       </td>
       <td>
+        <br><br>
         <a href="javascript:void(0)" onclick="popupfunction('3')" class=li>
-          <img src="Lion.jpg" alt="Lion" style="width:200;height:300px">
+          <img src="Lion1.jpg" alt="Lion" style="width:200;height:330px">
         </a>
       </td>
-    </tr>
-    <tr>
-      <td>The Bears</td>
-      <td>The Eagles</td>
-      <td>The Lions</td>
     </tr>
   </table>
 
 
   <div id="popup1" class="white_content">
-    <p align=center><br><br>
-      <img src="teamphoto.jpeg" width=70% /><br><br><br><br>
+    <p align=center>
+      <img src="bearlogo.jpg" width="30%" style="margin-bottom: 50px;">
+        <img src="teamphoto.jpeg" width="70%" style="margin-top: 5px;">
+	  <br>
       <a href="javascript:void(0)" onclick="popupclose('1')" class=linktext>Close Window</a>
       <a href="javascript:void(0)" onclick="popupfunction('4')" class=linktext>Schedule</a>
       <a href="javascript:void(0)" onclick="popupfunction('5')" class=linktext>Stats</a>
-	  <a href="javascript:void(0)" onclick="popupfunction('12')" class=linktext>Roster</a>	  
+      <a href="javascript:void(0)" onclick="popupfunction('12')" class=linktext>Roster</a>
     </p>
 
   </div>
 
   <div id="popup2" class="white_content">
-    <p align=center><br><br>
-      <img src="teamphoto1.jpeg" width=70% /><br><br><br><br>
+    <p align=center>
+      <img src="eaglelogo.jpg" width="30%" style="margin-bottom: 50px;"/>
+      <img src="teamphoto1.jpeg" width="70%" style="margin-top: 5px;"/>
+	  <br>
       <a href="javascript:void(0)" onclick="popupclose('2')" class=linktext>Close Window</a>
       <a href="javascript:void(0)" onclick="popupfunction('7')" class=linktext>Schedule</a>
       <a href="javascript:void(0)" onclick="popupfunction('8')" class=linktext>Stats</a>
-	  <a href="javascript:void(0)" onclick="popupfunction('13')" class=linktext>Roster</a>
+      <a href="javascript:void(0)" onclick="popupfunction('13')" class=linktext>Roster</a>
     </p>
 
   </div>
 
   <div id="popup3" class="white_content">
-    <p align=center><br><br>
-      <img src="teamphoto2.jpeg" width=70% /><br><br><br><br>
+    <p align=center>
+      <img src="lionlogo.jpg" width="30%" style="margin-bottom: 40px;"/>
+      <img src="teamphoto2.jpeg" width="70%"  style="margin-top: 0px;"/>
+	  <br>
       <a href="javascript:void(0)" onclick="popupclose('3')" class=linktext>Close Window</a>
       <a href="javascript:void(0)" onclick="popupfunction('9')" class=linktext>Schedule</a>
       <a href="javascript:void(0)" onclick="popupfunction('10')" class=linktext>Stats</a>
-	  <a href="javascript:void(0)" onclick="popupfunction('14')" class=linktext>Roster</a>
+      <a href="javascript:void(0)" onclick="popupfunction('14')" class=linktext>Roster</a>
     </p>
 
   </div>
 
   <div id="popup4" class="white_content">
-         <?php
+   <img src="bearlogo.jpg" width="30%" style="margin-bottom: -20px;"/>
+    <?php
 		$sql = "SELECT * FROM schedule_tab WHERE team = 'bears'";
 		$result = $conn->query($sql);
     ?>
-    <p align="center"><br><br>The Bears' Schedule<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Opponent</th>
-                <th>Game Date</th>
-                <th>Location</th>
-            </tr>
-            <?php
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br><br>Schedule<br></p>
+
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Opponent</th>
+        <th>Game Date</th>
+        <th>Location</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['opp'] . '</td>';
@@ -110,6 +112,7 @@ include("db_connection.php");
 			}
             ?>
     </table>
+	<br>
     <a href="javascript:void(0)" onclick="backToTeam('4')" class="linktext">Back to Team</a>
     </p>
   </div>
@@ -123,18 +126,18 @@ include("db_connection.php");
 		$player_stats_result = $conn->query($player_stats_sql);
     ?>
     <p align="center"><br><br>The Bears' Stats<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>PPG</th>
-                <th>OPPG</th>
-                <th>RPG</th>
-                <th>APG</th>
-                <th>FG%</th>
-                <th>3ptFG%</th>
-                <th>FT%</th>
-                <th>Diff.</th>
-            </tr>
-            <?php
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>PPG</th>
+        <th>OPPG</th>
+        <th>RPG</th>
+        <th>APG</th>
+        <th>FG%</th>
+        <th>3ptFG%</th>
+        <th>FT%</th>
+        <th>Diff.</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['ppg'] . '</td>';
@@ -148,23 +151,23 @@ include("db_connection.php");
 				echo '</tr>';
 			}
             ?>
-        </table>
-		<br>
-		<br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Name</th>
-                <th>PPG</th>
-                <th>RPG</th>
-                <th>APG</th>
-                <th>SPG</th>
-                <th>BPG</th>
-                <th>TO/G</th>
-                <th>FG%</th>
-                <th>3ptFG%</th>
-                <th>FT%</th>
-            </tr>
-            <?php
+    </table>
+    <br>
+    <br>
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Name</th>
+        <th>PPG</th>
+        <th>RPG</th>
+        <th>APG</th>
+        <th>SPG</th>
+        <th>BPG</th>
+        <th>TO/G</th>
+        <th>FG%</th>
+        <th>3ptFG%</th>
+        <th>FT%</th>
+      </tr>
+      <?php
             while ($player_row = $player_stats_result->fetch_assoc()) {
                 echo '<tr>';
                 echo '<td>' . $player_row['name'] . '</td>';
@@ -180,26 +183,26 @@ include("db_connection.php");
                 echo '</tr>';
             }
             ?>
-        </table>
-        <a href="javascript:void(0)" onclick="backToTeam('5')" class="linktext">Back to Team</a>
+    </table>
+    <a href="javascript:void(0)" onclick="backToTeam('5')" class="linktext">Back to Team</a>
     </p>
-	</div>
-	
-	<div id="popup12" class="white_content">
+  </div>
+
+  <div id="popup12" class="white_content">
     <?php
 		$sql = "SELECT * FROM roster_tab WHERE team = 'bears'";
 		$result = $conn->query($sql);
     ?>
     <p align="center"><br><br>The Bears' Roster<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Player</th>
-                <th>Height</th>
-                <th>Weight</th>
-                <th>Grade</th>
-                <th>Position</th>
-            </tr>
-            <?php
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Player</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Grade</th>
+        <th>Position</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['name'] . '</td>';
@@ -210,24 +213,24 @@ include("db_connection.php");
 				echo '</tr>';
 			}
             ?>
-        </table>
-        <a href="javascript:void(0)" onclick="backToTeam('12')" class="linktext">Back to Team</a>
+    </table>
+    <a href="javascript:void(0)" onclick="backToTeam('12')" class="linktext">Back to Team</a>
     </p>
-	</div>
+  </div>
 
   <div id="popup7" class="white_content">
-     <?php
+    <?php
 		$sql = "SELECT * FROM schedule_tab WHERE team = 'eagles'";
 		$result = $conn->query($sql);
     ?>
     <p align="center"><br><br>The Eagles' Schedule<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Opponent</th>
-                <th>Game Date</th>
-                <th>Location</th>
-            </tr>
-            <?php
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Opponent</th>
+        <th>Game Date</th>
+        <th>Location</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['opp'] . '</td>';
@@ -242,25 +245,25 @@ include("db_connection.php");
   </div>
 
   <div id="popup8" class="white_content">
-       <?php
+    <?php
 		$sql = "SELECT * FROM stats_tab WHERE team = 'eagles'";
 		$result = $conn->query($sql);
 		$player_stats_sql = "SELECT name, ppg, rpg, apg, spg, bpg, topg, fg, 3fg, ft FROM roster_tab WHERE team = 'eagles'";
 		$player_stats_result = $conn->query($player_stats_sql);
     ?>
     <p align="center"><br><br>The Eagles' Stats<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>PPG</th>
-                <th>OPPG</th>
-                <th>RPG</th>
-                <th>APG</th>
-                <th>FG%</th>
-                <th>3ptFG%</th>
-                <th>FT%</th>
-                <th>Diff.</th>
-            </tr>
-            <?php
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>PPG</th>
+        <th>OPPG</th>
+        <th>RPG</th>
+        <th>APG</th>
+        <th>FG%</th>
+        <th>3ptFG%</th>
+        <th>FT%</th>
+        <th>Diff.</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['ppg'] . '</td>';
@@ -275,22 +278,22 @@ include("db_connection.php");
 			}
             ?>
     </table>
-	<br>
-		<br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Name</th>
-                <th>PPG</th>
-                <th>RPG</th>
-                <th>APG</th>
-                <th>SPG</th>
-                <th>BPG</th>
-                <th>TO/G</th>
-                <th>FG%</th>
-                <th>3ptFG%</th>
-                <th>FT%</th>
-            </tr>
-            <?php
+    <br>
+    <br>
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Name</th>
+        <th>PPG</th>
+        <th>RPG</th>
+        <th>APG</th>
+        <th>SPG</th>
+        <th>BPG</th>
+        <th>TO/G</th>
+        <th>FG%</th>
+        <th>3ptFG%</th>
+        <th>FT%</th>
+      </tr>
+      <?php
             while ($player_row = $player_stats_result->fetch_assoc()) {
                 echo '<tr>';
                 echo '<td>' . $player_row['name'] . '</td>';
@@ -306,26 +309,26 @@ include("db_connection.php");
                 echo '</tr>';
             }
             ?>
-        </table>
+    </table>
     <a href="javascript:void(0)" onclick="backToTeam('8')" class="linktext">Back to Team</a>
     </p>
   </div>
-  
-	<div id="popup13" class="white_content">
+
+  <div id="popup13" class="white_content">
     <?php
 		$sql = "SELECT * FROM roster_tab WHERE team = 'eagles'";
 		$result = $conn->query($sql);
     ?>
     <p align="center"><br><br>The Eagles' Roster<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Player</th>
-                <th>Height</th>
-                <th>Weight</th>
-                <th>Grade</th>
-                <th>Position</th>
-            </tr>
-            <?php
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Player</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Grade</th>
+        <th>Position</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['name'] . '</td>';
@@ -336,24 +339,24 @@ include("db_connection.php");
 				echo '</tr>';
 			}
             ?>
-        </table>
-        <a href="javascript:void(0)" onclick="backToTeam('13')" class="linktext">Back to Team</a>
+    </table>
+    <a href="javascript:void(0)" onclick="backToTeam('13')" class="linktext">Back to Team</a>
     </p>
-	</div>  
+  </div>
 
   <div id="popup9" class="white_content">
-     <?php
+    <?php
 		$sql = "SELECT * FROM schedule_tab WHERE team = 'lions'";
 		$result = $conn->query($sql);
     ?>
     <p align="center"><br><br>The Lions' Schedule<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Opponent</th>
-                <th>Game Date</th>
-                <th>Location</th>
-            </tr>
-            <?php
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Opponent</th>
+        <th>Game Date</th>
+        <th>Location</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['opp'] . '</td>';
@@ -368,25 +371,25 @@ include("db_connection.php");
   </div>
 
   <div id="popup10" class="white_content">
-        <?php
+    <?php
 		$sql = "SELECT * FROM stats_tab WHERE team = 'lions'";
 		$result = $conn->query($sql);
 		$player_stats_sql = "SELECT name, ppg, rpg, apg, spg, bpg, topg, fg, 3fg, ft FROM roster_tab WHERE team = 'lions'";
 		$player_stats_result = $conn->query($player_stats_sql);
     ?>
     <p align="center"><br><br>The Lions' Stats<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>PPG</th>
-                <th>OPPG</th>
-                <th>RPG</th>
-                <th>APG</th>
-                <th>FG%</th>
-                <th>3ptFG%</th>
-                <th>FT%</th>
-                <th>Diff.</th>
-            </tr>
-            <?php
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>PPG</th>
+        <th>OPPG</th>
+        <th>RPG</th>
+        <th>APG</th>
+        <th>FG%</th>
+        <th>3ptFG%</th>
+        <th>FT%</th>
+        <th>Diff.</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['ppg'] . '</td>';
@@ -401,22 +404,22 @@ include("db_connection.php");
 			}
             ?>
     </table>
-	<br>
-	<br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Name</th>
-                <th>PPG</th>
-                <th>RPG</th>
-                <th>APG</th>
-                <th>SPG</th>
-                <th>BPG</th>
-                <th>TO/G</th>
-                <th>FG%</th>
-                <th>3ptFG%</th>
-                <th>FT%</th>
-            </tr>
-            <?php
+    <br>
+    <br>
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Name</th>
+        <th>PPG</th>
+        <th>RPG</th>
+        <th>APG</th>
+        <th>SPG</th>
+        <th>BPG</th>
+        <th>TO/G</th>
+        <th>FG%</th>
+        <th>3ptFG%</th>
+        <th>FT%</th>
+      </tr>
+      <?php
             while ($player_row = $player_stats_result->fetch_assoc()) {
                 echo '<tr>';
                 echo '<td>' . $player_row['name'] . '</td>';
@@ -432,26 +435,26 @@ include("db_connection.php");
                 echo '</tr>';
             }
             ?>
-        </table>
+    </table>
     <a href="javascript:void(0)" onclick="backToTeam('10')" class="linktext">Back to Team</a>
     </p>
   </div>
-  
+
   <div id="popup14" class="white_content">
     <?php
 		$sql = "SELECT * FROM roster_tab WHERE team = 'lions'";
 		$result = $conn->query($sql);
     ?>
     <p align="center"><br><br>The Lions' Roster<br><br>
-        <table border="1" style="margin: 0 auto;">
-            <tr>
-                <th>Player</th>
-                <th>Height</th>
-                <th>Weight</th>
-                <th>Grade</th>
-                <th>Position</th>
-            </tr>
-            <?php
+    <table border="1" style="margin: 0 auto;">
+      <tr>
+        <th>Player</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Grade</th>
+        <th>Position</th>
+      </tr>
+      <?php
             while ($row = $result->fetch_assoc()) {
 				echo '<tr>';
 				echo '<td>' . $row['name'] . '</td>';
@@ -462,10 +465,10 @@ include("db_connection.php");
 				echo '</tr>';
 			}
             ?>
-        </table>
-        <a href="javascript:void(0)" onclick="backToTeam('14')" class="linktext">Back to Team</a>
+    </table>
+    <a href="javascript:void(0)" onclick="backToTeam('14')" class="linktext">Back to Team</a>
     </p>
-	</div>
+  </div>
 
   <div class="cartImg">
     <img src="LoginButton.jpg" width="100%" onclick="popupfunction('6')" style="cursor:pointer;" />
@@ -481,7 +484,7 @@ include("db_connection.php");
     </font>
     <label id="cart"> </label>
     <label id="item"> </label>
-	<a href="javascript:void(0)" onclick="popupclose('6')" class=linktext>Close</a>
+    <a href="javascript:void(0)" onclick="popupclose('6')" class=linktext>Close</a>
   </div>
 
   <div id="fade2" class="black_content"></div>
@@ -500,6 +503,12 @@ include("db_connection.php");
       <a href="javascript:void(0)" onclick="popupclose('11')" class="linktext">Create Account</a>
     </p>
   </div>
+
+  <br><br><br><br>
+  <ul>
+    <br>
+    Website By: John Honeycutt and Megan Lavender
+  </ul>
 
   </center>
 </body>
