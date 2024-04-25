@@ -8,7 +8,7 @@ include("db_connection.php");
 <head>
   <title>TIPOFF</title>
 
-  <link rel="stylesheet" href="mystyles1.css" />
+  <link rel="stylesheet" href="mystyles2.css" />
   <script type="text/javascript" src="script.js"></script>
 
 </head>
