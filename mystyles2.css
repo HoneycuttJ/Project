@@ -1,0 +1,488 @@
+body {
+  text-align: center;
+  font-family: Baskerville, serif;
+}
+
+button {
+  width: 20%;
+  padding: 20px 40px;
+  background-color: #a5a5a5;
+  color: blue;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.b2 {
+  width: auto;
+  padding: 20px 80px;
+  background-color: #a5a5a5;
+  color: blue;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  margin: 10px;
+  text-align: center;
+}
+
+.myText {
+  font-family: Cursive;
+  font-size: 50px;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  color: orange;
+}
+
+.login-div,
+.sign-div {
+  font-family: Monaco;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px;
+  position: absolute;
+}
+
+.login-div {
+  left: 550px;
+  top: 300px;
+}
+
+.sign-div {
+  right: 550px;
+  top: 300px;
+}
+
+.form-container {
+  border: 1px solid red;
+  margin: 20px;
+  box-shadow: 5px 5px 30px #454545;
+  background-color: #2f64ba;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+ul {
+  font-family: Arial;
+  color: #ffffff;
+  list-style-type: none;
+  background-color: #343551;
+  height: 80px;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.drp {
+  display: inline-block;
+  color: yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li .menu-item {
+
+  display: inline-block;
+}
+
+.menu-content {
+
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  z-index: 1;
+
+
+}
+
+.menu-content a {
+  font-family: Arial;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+
+.menu-item:hover .menu-content {
+  display: block;
+
+}
+
+.menu-item a:hover {
+
+  background-color: #000000;
+  color: yellow;
+}
+
+.menu-content a:hover {
+
+  background-color: #2f64ba;
+  color: yellow;
+}
+
+h1 {
+  color: #343551;
+  font-family: Arial;
+  font-size: 40px;
+}
+
+h2 {
+  color: #aa5225;
+  font-family: Arial;
+  font-size: 30px;
+}
+
+img {
+  margin: 50px;
+}
+
+.img2 {
+  margin: 0px;
+}
+
+.cartImg {
+  position: absolute;
+  top: 150px;
+  right: 375px;
+  width: 100px;
+  height: 200px;
+}
+
+
+.white_content {
+  position: absolute;
+  top: 250px;
+  left: 28.3%;
+  width: 800px;
+  height: 650px;
+  background-color: #fff;
+  z-index: 1000;
+  display: none;
+  overflow: scroll;
+}
+
+.black_content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.linktext {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #343551;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.linktext:hover {
+  background-color: #343551;
+  color: yellow;
+}
+
+.cart_item {
+  position: absolute;
+  top: 260px;
+  right: 150px;
+  width: 400px;
+  height: 300px;
+  background-color: #f2f3f5;
+  display: none;
+  z-index: 1001;
+}
+
+.signup {
+  position: absolute;
+  top: 260px;
+  right: 50px;
+  width: 400px;
+  height: 600px;
+  background-color: #f2f3f5;
+  display: none;
+  z-index: 1001;
+}
+
+.buttonContainer {
+  position: absolute;
+  top: 150px;
+  right: 250px;
+  width: 100px;
+  height: 200px;
+}body {
+  text-align: center;
+  font-family: Baskerville, serif;
+}
+
+button {
+  width: 20%;
+  padding: 20px 40px;
+  background-color: #a5a5a5;
+  color: blue;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.b2 {
+  width: auto;
+  padding: 20px 80px;
+  background-color: #a5a5a5;
+  color: blue;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  margin: 10px;
+  text-align: center;
+}
+
+.myText {
+  font-family: Cursive;
+  font-size: 50px;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  color: orange;
+}
+
+.login-div,
+.sign-div {
+  font-family: Monaco;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px;
+  position: absolute;
+}
+
+.login-div {
+  left: 550px;
+  top: 300px;
+}
+
+.sign-div {
+  right: 550px;
+  top: 300px;
+}
+
+.form-container {
+  border: 1px solid red;
+  margin: 20px;
+  box-shadow: 5px 5px 30px #454545;
+  background-color: #2f64ba;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+ul {
+  font-family: Arial;
+  color: #ffffff;
+  list-style-type: none;
+  background-color: #343551;
+  height: 80px;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.drp {
+  display: inline-block;
+  color: yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li .menu-item {
+
+  display: inline-block;
+}
+
+.menu-content {
+
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  z-index: 1;
+
+
+}
+
+.menu-content a {
+  font-family: Arial;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+
+.menu-item:hover .menu-content {
+  display: block;
+
+}
+
+.menu-item a:hover {
+
+  background-color: #000000;
+  color: yellow;
+}
+
+.menu-content a:hover {
+
+  background-color: #2f64ba;
+  color: yellow;
+}
+
+h1 {
+  color: #343551;
+  font-family: Arial;
+  font-size: 40px;
+}
+
+h2 {
+  color: #aa5225;
+  font-family: Arial;
+  font-size: 30px;
+}
+
+img {
+  margin: 50px;
+}
+
+.img2 {
+  margin: 0px;
+}
+
+.cartImg {
+  position: absolute;
+  top: 150px;
+  right: 375px;
+  width: 100px;
+  height: 200px;
+}
+
+
+.white_content {
+  position: absolute;
+  top: 250px;
+  left: 28.3%;
+  width: 800px;
+  height: 650px;
+  background-color: #fff;
+  z-index: 1000;
+  display: none;
+}
+
+.black_content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.linktext {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #343551;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.linktext:hover {
+  background-color: #343551;
+  color: yellow;
+}
+
+.cart_item {
+  position: absolute;
+  top: 260px;
+  right: 150px;
+  width: 400px;
+  height: 300px;
+  background-color: #f2f3f5;
+  display: none;
+  z-index: 1001;
+}
+
+.signup {
+  position: absolute;
+  top: 260px;
+  right: 50px;
+  width: 400px;
+  height: 600px;
+  background-color: #f2f3f5;
+  display: none;
+  z-index: 1001;
+}
+
+.buttonContainer {
+  position: absolute;
+  top: 150px;
+  right: 250px;
+  width: 100px;
+  height: 200px;
+}
