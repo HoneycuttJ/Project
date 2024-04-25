@@ -94,7 +94,7 @@ include("db_connection.php");
 		$sql = "SELECT * FROM schedule_tab WHERE team = 'bears'";
 		$result = $conn->query($sql);
     ?>
-    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br><br>Schedule<br></p>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Schedule<br></p>
 
     <table border="1" style="margin: 0 auto;">
       <tr>
@@ -125,7 +125,8 @@ include("db_connection.php");
 		$player_stats_sql = "SELECT name, ppg, rpg, apg, spg, bpg, topg, fg, 3fg, ft FROM roster_tab WHERE team = 'bears'";
 		$player_stats_result = $conn->query($player_stats_sql);
     ?>
-    <p align="center"><br><br>The Bears' Stats<br><br>
+	<img src="bearlogo.jpg" width="30%" style="margin-bottom: -20px;"/>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Stats<br></p>
     <table border="1" style="margin: 0 auto;">
       <tr>
         <th>PPG</th>
@@ -183,7 +184,7 @@ include("db_connection.php");
                 echo '</tr>';
             }
             ?>
-    </table>
+    </table><br>
     <a href="javascript:void(0)" onclick="backToTeam('5')" class="linktext">Back to Team</a>
     </p>
   </div>
@@ -193,7 +194,8 @@ include("db_connection.php");
 		$sql = "SELECT * FROM roster_tab WHERE team = 'bears'";
 		$result = $conn->query($sql);
     ?>
-    <p align="center"><br><br>The Bears' Roster<br><br>
+	<img src="bearlogo.jpg" width="30%" style="margin-bottom: -20px;"/>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Roster<br>
     <table border="1" style="margin: 0 auto;">
       <tr>
         <th>Player</th>
@@ -213,7 +215,7 @@ include("db_connection.php");
 				echo '</tr>';
 			}
             ?>
-    </table>
+    </table><br>
     <a href="javascript:void(0)" onclick="backToTeam('12')" class="linktext">Back to Team</a>
     </p>
   </div>
@@ -223,7 +225,9 @@ include("db_connection.php");
 		$sql = "SELECT * FROM schedule_tab WHERE team = 'eagles'";
 		$result = $conn->query($sql);
     ?>
-    <p align="center"><br><br>The Eagles' Schedule<br><br>
+	<img src="eaglelogo.jpg" width="30%" style="margin-bottom: -20px;"/>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Schedule<br></p>
+
     <table border="1" style="margin: 0 auto;">
       <tr>
         <th>Opponent</th>
@@ -240,6 +244,7 @@ include("db_connection.php");
 			}
             ?>
     </table>
+	<br>
     <a href="javascript:void(0)" onclick="backToTeam('7')" class="linktext">Back to Team</a>
     </p>
   </div>
@@ -248,10 +253,11 @@ include("db_connection.php");
     <?php
 		$sql = "SELECT * FROM stats_tab WHERE team = 'eagles'";
 		$result = $conn->query($sql);
-		$player_stats_sql = "SELECT name, ppg, rpg, apg, spg, bpg, topg, fg, 3fg, ft FROM roster_tab WHERE team = 'eagles'";
+		$player_stats_sql = "SELECT name, ppg, rpg, apg, spg, bpg, topg, fg, 3fg, ft FROM roster_tab WHERE team = 'bears'";
 		$player_stats_result = $conn->query($player_stats_sql);
     ?>
-    <p align="center"><br><br>The Eagles' Stats<br><br>
+	<img src="eaglelogo.jpg" width="30%" style="margin-bottom: -20px;"/>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Stats<br></p>
     <table border="1" style="margin: 0 auto;">
       <tr>
         <th>PPG</th>
@@ -309,7 +315,7 @@ include("db_connection.php");
                 echo '</tr>';
             }
             ?>
-    </table>
+    </table><br>
     <a href="javascript:void(0)" onclick="backToTeam('8')" class="linktext">Back to Team</a>
     </p>
   </div>
@@ -319,7 +325,8 @@ include("db_connection.php");
 		$sql = "SELECT * FROM roster_tab WHERE team = 'eagles'";
 		$result = $conn->query($sql);
     ?>
-    <p align="center"><br><br>The Eagles' Roster<br><br>
+	<img src="eaglelogo.jpg" width="30%" style="margin-bottom: -20px;"/>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Roster<br>
     <table border="1" style="margin: 0 auto;">
       <tr>
         <th>Player</th>
@@ -339,7 +346,7 @@ include("db_connection.php");
 				echo '</tr>';
 			}
             ?>
-    </table>
+    </table><br>
     <a href="javascript:void(0)" onclick="backToTeam('13')" class="linktext">Back to Team</a>
     </p>
   </div>
@@ -349,7 +356,9 @@ include("db_connection.php");
 		$sql = "SELECT * FROM schedule_tab WHERE team = 'lions'";
 		$result = $conn->query($sql);
     ?>
-    <p align="center"><br><br>The Lions' Schedule<br><br>
+ 	<img src="lionlogo.jpg" width="30%" style="margin-bottom: -20px;"/>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Schedule<br></p>
+
     <table border="1" style="margin: 0 auto;">
       <tr>
         <th>Opponent</th>
@@ -366,6 +375,7 @@ include("db_connection.php");
 			}
             ?>
     </table>
+	<br>
     <a href="javascript:void(0)" onclick="backToTeam('9')" class="linktext">Back to Team</a>
     </p>
   </div>
@@ -377,7 +387,8 @@ include("db_connection.php");
 		$player_stats_sql = "SELECT name, ppg, rpg, apg, spg, bpg, topg, fg, 3fg, ft FROM roster_tab WHERE team = 'lions'";
 		$player_stats_result = $conn->query($player_stats_sql);
     ?>
-    <p align="center"><br><br>The Lions' Stats<br><br>
+	<img src="lionlogo.jpg" width="30%" style="margin-bottom: -30px;"/>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Stats<br></p>
     <table border="1" style="margin: 0 auto;">
       <tr>
         <th>PPG</th>
@@ -435,7 +446,7 @@ include("db_connection.php");
                 echo '</tr>';
             }
             ?>
-    </table>
+    </table><br>
     <a href="javascript:void(0)" onclick="backToTeam('10')" class="linktext">Back to Team</a>
     </p>
   </div>
@@ -445,7 +456,8 @@ include("db_connection.php");
 		$sql = "SELECT * FROM roster_tab WHERE team = 'lions'";
 		$result = $conn->query($sql);
     ?>
-    <p align="center"><br><br>The Lions' Roster<br><br>
+	<img src="lionlogo.jpg" width="30%" style="margin-bottom: -20px;"/>
+    <p style="font-family: Arial Black; color: #343551; text-align: center;"><br>Roster<br>
     <table border="1" style="margin: 0 auto;">
       <tr>
         <th>Player</th>
@@ -465,7 +477,7 @@ include("db_connection.php");
 				echo '</tr>';
 			}
             ?>
-    </table>
+    </table><br>
     <a href="javascript:void(0)" onclick="backToTeam('14')" class="linktext">Back to Team</a>
     </p>
   </div>
